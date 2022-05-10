@@ -1,13 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	padding: 0;
+	block-size: 100vh;
+	inline-size: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Sora', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 30px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+	font-family: 'Sora';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 50px;
+	letter-spacing: -0.02em;
+	margin: 0;
+}
+
+h2 {
+	margin: 0;
+}
+
+p {
+	margin-block: 20px;
+}
+
+section {
+	margin-block-start: 40px;
+}
+
+ul {
+	list-style: none;
+	position: relative;
+}
+
+ul li::before {
+	content: '';
+	inline-size: 16px;
+	block-size: 4px;
+	position: absolute;
+	left: 9px;
+	margin-top: 15px;
+	background: linear-gradient(90deg, #911812 0%, #e1261c 100%);
+}
+
+ul li > ul li::before {
+	background: linear-gradient(90deg, #d3dae8 0%, #a7b7d8 100%);
+}
+
+.container {
+	position: relative;
+	inline-size: 1280px;
+	block-size: 1050px;
+	color: #ffffff;
+	background: linear-gradient(90deg, #2b303a 0%, #3f4756 100%);
+}
+
+.content {
+	width: 660px;
+	padding-inline-start: 100px;
+	padding-block-start: 100px;
+}
+
+.textLink {
+	background-color: transparent;
+	border: none;
+	text-decoration: underline;
+	font-family: 'Sora', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 30px;
+	color: #e1261c;
+}
+
+.sideImageContent {
+	display: flex;
+}
+
+.sideImageContent div {
+	padding-inline-end: 40px;
+	padding-block-end: 20px;
+}
+
+.sideImage {
+	width: 240px;
+	height: 180px;
 }
