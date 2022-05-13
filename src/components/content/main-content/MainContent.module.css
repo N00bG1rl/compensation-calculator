@@ -1,0 +1,32 @@
+.sideImageContent {
+	display: flex;
+}
+
+.sideImageContent div {
+	padding-inline-end: 40px;
+}
+
+.sideImage {
+	width: 240px;
+	height: 180px;
+}
+
+ul {
+	list-style: none;
+	position: relative;
+	margin: 0;
+}
+
+ul li::before {
+	content: '';
+	inline-size: 16px;
+	block-size: 4px;
+	position: absolute;
+	left: 9px;
+	margin-top: 15px;
+	background: linear-gradient(90deg, #911812 0%, #e1261c 100%);
+}
+
+ul li > ul li::before {
+	background: linear-gradient(90deg, #d3dae8 0%, #a7b7d8 100%);
+}
