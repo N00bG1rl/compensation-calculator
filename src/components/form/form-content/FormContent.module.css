@@ -1,37 +1,137 @@
-/* .formContent {
-	inline-size: 320px;
-	block-size: 755px;
-	background-color: #ffffff;
-	-webkit-clip-path: polygon(
-		20px 0%,
-		calc(100% - 20px) 0,
-		100% 20px,
-		100% calc(100% - 20px),
-		calc(100% - 20px) 100%,
-		20px 100%,
-		0% calc(100% - 20px),
-		0% 20px
-	);
-	clip-path: polygon(
-		20px 0%,
-		calc(100% - 20px) 0,
-		100% 20px,
-		100% calc(100% - 20px),
-		calc(100% - 20px) 100%,
-		20px 100%,
-		0% calc(100% - 20px),
-		0% 20px
-	);
-} */
+h4 {
+	margin-block-start: 80px;
+}
 
-.form input[type='number'] {
+.formContent {
+	font-family: 'Sora';
+	font-style: normal;
+	font-weight: 400;
+	color: #111317;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.formInputWrapper {
+	position: relative;
+}
+
+.formInputWrapper label,
+.formInputWrapper input {
+	inline-size: 100%;
+	padding: 0;
+	display: block;
+}
+
+.formInputWrapper input {
 	-moz-appearance: textfield;
 	appearance: textfield;
 	margin: 0;
+	outline: none;
+	border: none;
+	background: none;
+	font-size: 18px;
+	line-height: 30px;
+	text-indent: 10px;
+	padding-inline-end: 10px;
 }
 
-.form span {
+.formInputWrapper span,
+.checkbox {
+	background: radial-gradient(
+				circle at 100% 100%,
+				#ffffff 0,
+				#ffffff 2px,
+				transparent 2px
+			)
+			0% 0%/4px 4px no-repeat,
+		radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 2px, transparent 2px)
+			100% 0%/4px 4px no-repeat,
+		radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 2px, transparent 2px)
+			0% 100%/4px 4px no-repeat,
+		radial-gradient(circle at 0 0, #ffffff 0, #ffffff 2px, transparent 2px) 100%
+			100%/4px 4px no-repeat,
+		linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 4px)
+			calc(100% - 8px) no-repeat,
+		linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 8px)
+			calc(100% - 4px) no-repeat,
+		linear-gradient(90deg, #d3dae8 0%, #a7b7d8 100%);
+	border-radius: 4px;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.formInputWrapper span {
+	inline-size: 100%;
+	block-size: 50px;
+	display: inline-flex;
+	align-items: center;
+	margin-block-start: 5px;
+	padding-inline-end: 10px;
+	font-weight: 700;
+	box-sizing: border-box;
+}
+
+.checkboxWrapper {
+	inline-size: 100%;
+	display: inline-flex;
 	position: relative;
-	left: -20px;
-	color: #111317;
+	align-items: center;
+	margin: 0;
+}
+
+.checkboxWrapper label {
+	padding-inline-start: 10px;
+}
+
+.checkbox[type='checkbox'] {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-o-appearance: none;
+	inline-size: 20px;
+	block-size: 20px;
+	margin: 0;
+}
+
+.checkbox[type='checkbox']:before,
+.checkbox[type='checkbox']:checked:before {
+	content: '';
+	position: absolute;
+	padding-inline-start: 3px;
+	padding-block-start: 2px;
+}
+
+.checkbox[type='checkbox']:checked:before {
+	content: url(../../../assets//check.svg);
+}
+
+.submitBtn {
+	inline-size: 169px;
+	block-size: 60px;
+	border: none;
+	border-radius: 30px;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	margin-block-start: 20px;
+	padding-inline: 40px;
+	padding-block: 20px;
+	gap: 10px;
+	/* cursor: pointer; */
+
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 20px;
+
+	color: #ffffff;
+	background: linear-gradient(90deg, #911812 0%, #e1261c 100%);
+	text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+}
+
+.submitBtn:hover {
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15),
+		inset 0px -4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.submitBtn:active {
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25),
+		inset 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
