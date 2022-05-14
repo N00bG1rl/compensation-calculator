@@ -1,4 +1,12 @@
 .content {
-	inline-size: 660px;
+	max-inline-size: 660px;
 	margin-inline-end: 100px;
+}
+
+@media only screen and (max-width: 1200px) {
+	.content {
+		inline-size: 100%;
+		position: relative;
+		margin-inline-end: 0;
+	}
 }

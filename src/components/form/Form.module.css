@@ -1,5 +1,6 @@
 .formWrapper {
 	inline-size: 320px;
+	min-inline-size: 320px;
 	block-size: 755px;
 	background: #ffffff;
 	color: #111317;
