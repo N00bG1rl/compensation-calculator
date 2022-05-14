@@ -1,7 +1,12 @@
-.formContent {
+.formWrapper {
 	inline-size: 320px;
 	block-size: 755px;
-	background-color: #ffffff;
+	background: #ffffff;
+	color: #111317;
+	font-size: 14px;
+	line-height: 15px;
+	padding: 20px;
+	box-sizing: border-box;
 	-webkit-clip-path: polygon(
 		20px 0%,
 		calc(100% - 20px) 0,

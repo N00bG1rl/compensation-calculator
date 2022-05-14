@@ -1,12 +1,8 @@
 .textLink {
+	font: inherit;
 	background-color: transparent;
 	border: none;
 	text-decoration: underline;
-	font-family: 'Sora', sans-serif;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 30px;
 	color: #e1261c;
 	cursor: pointer;
 }

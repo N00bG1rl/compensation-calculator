@@ -1,13 +1,9 @@
 h4 {
-	margin-block-start: 80px;
+	margin-block-start: 60px;
+	margin-block-end: 20px;
 }
 
 .formContent {
-	font-family: 'Sora';
-	font-style: normal;
-	font-weight: 400;
-	color: #111317;
-	font-size: 14px;
 	line-height: 20px;
 }
 
@@ -25,14 +21,14 @@ h4 {
 .formInputWrapper input {
 	-moz-appearance: textfield;
 	appearance: textfield;
-	margin: 0;
 	outline: none;
 	border: none;
 	background: none;
+	margin: 0;
+	padding-inline-end: 10px;
 	font-size: 18px;
 	line-height: 30px;
 	text-indent: 10px;
-	padding-inline-end: 10px;
 }
 
 .formInputWrapper span,

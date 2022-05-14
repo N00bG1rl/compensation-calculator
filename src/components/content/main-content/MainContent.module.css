@@ -1,3 +1,7 @@
+main {
+	margin-block-start: 40px;
+}
+
 .sideImageContent {
 	display: flex;
 }
@@ -7,8 +11,8 @@
 }
 
 .sideImage {
-	width: 240px;
-	height: 180px;
+	inline-size: 240px;
+	block-size: 180px;
 }
 
 ul {
@@ -22,8 +26,8 @@ ul li::before {
 	inline-size: 16px;
 	block-size: 4px;
 	position: absolute;
-	left: 9px;
-	margin-top: 15px;
+	inset-inline-start: 9px;
+	margin-block-start: 15px;
 	background: linear-gradient(90deg, #911812 0%, #e1261c 100%);
 }
 

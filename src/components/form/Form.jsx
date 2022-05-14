@@ -5,7 +5,7 @@ import styles from './Form.module.css'
 
 function Form() {
 	return (
-		<section className={styles.formContent}>
+		<section className={styles.formWrapper}>
 			<FormContent />
 			<FormResult />
 		</section>
