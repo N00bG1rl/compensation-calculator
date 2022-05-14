@@ -1,3 +1,76 @@
 .formResult {
 	color: #111317;
+	margin-block-start: 20px;
+}
+
+.overview {
+	display: flex;
+	text-align: center;
+	font-family: 'Sora';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 15px;
+	text-align: center;
+	color: #111317;
+}
+
+.overview section p:first-of-type {
+	margin-block-end: 0;
+}
+
+.formResult::before,
+.totalAmount::before {
+	content: '';
+	width: 320px;
+	height: 1px;
+	position: absolute;
+	margin-inline-start: -20px;
+	display: block;
+	background: #e9edf4;
+	border-radius: 0px 0px 12px 2px;
+}
+
+.resultSum {
+	font-family: 'Sora';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 20px;
+	color: #111317;
+	margin-block-start: 10px;
+	margin-block-end: 0;
+}
+
+.dailySum {
+	font-family: 'Sora';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 15px;
+	text-align: center;
+	color: #7a818e;
+	margin-block-start: 0;
+}
+
+.totalAmount {
+	font-family: 'Sora';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 15px;
+	text-align: center;
+	color: #111317;
+}
+
+.totalAmount p:first-of-type {
+	padding-block-start: 20px;
+	margin-block-start: 0;
+}
+
+.totalAmount .totalSum {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 30px;
+	margin: 0;
 }
