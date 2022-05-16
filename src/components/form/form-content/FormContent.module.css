@@ -12,13 +12,13 @@ h4 {
 }
 
 .formInputWrapper label,
-.formInputWrapper input {
+.formInputWrapper input[type='number'] {
 	inline-size: 100%;
 	padding: 0;
 	display: block;
 }
 
-.formInputWrapper input {
+.formInputWrapper input[type='number'] {
 	-moz-appearance: textfield;
 	appearance: textfield;
 	outline: none;

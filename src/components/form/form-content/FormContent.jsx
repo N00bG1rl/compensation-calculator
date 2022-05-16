@@ -1,8 +1,13 @@
 import styles from './FormContent.module.css'
 
-function FormContent() {
+function FormContent({
+	onFormChange,
+	onCheckboxClick,
+	onFormSubmit,
+	isCheckboxChecked,
+}) {
 	return (
-		<form className={styles.formContent}>
+		<form onSubmit={onFormSubmit} className={styles.formContent}>
 			<h4>
 				Compensation <br /> Calculator
 			</h4>
@@ -11,11 +16,13 @@ function FormContent() {
 				<span>
 					<input
 						id='income'
+						name='income'
 						type='number'
 						inputMode='numeric'
 						required
 						min='0'
 						max='100000'
+						onChange={onFormChange}
 					/>
 					€
 				</span>
@@ -25,20 +32,31 @@ function FormContent() {
 				<span>
 					<input
 						id='sick-days'
+						name='sickDays'
 						type='number'
 						inputMode='numeric'
 						required
 						min='0'
-						max='240'
+						max='365'
+						onChange={onFormChange}
 					/>
 					days
 				</span>
 			</p>
 			<p className={styles.checkboxWrapper}>
-				<input type='checkbox' className={styles.checkbox} />
-				<label>I have tubercolosis</label>
+				<input
+					type='checkbox'
+					id='tubercolosis'
+					name='tubercolosis'
+					checked={isCheckboxChecked}
+					onChange={onCheckboxClick}
+					className={styles.checkbox}
+				/>
+				<label htmlFor='tubercolosis'>I have tubercolosis</label>
 			</p>
-			<button className={styles.submitBtn}>Calculate</button>
+			<button type='submit' className={styles.submitBtn}>
+				Calculate
+			</button>
 		</form>
 	)
 }
