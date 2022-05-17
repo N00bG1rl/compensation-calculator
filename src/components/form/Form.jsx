@@ -87,14 +87,14 @@ function Form() {
 
 		const isFormInputsValid = checkFormInputsValidity()
 
-		let dailySalary = 0
+		let dailyCompensation = 0
 		let daysFromEmployer = 0
 		let daysFromHealthInsurance = 0
 
 		if (sanitizedSickDays <= notCoveredDays) {
-			dailySalary = 0
+			dailyCompensation = 0
 		} else {
-			dailySalary = averageDailyAmount()
+			dailyCompensation = averageDailyAmount()
 		}
 
 		if (isFormInputsValid) {
@@ -113,10 +113,13 @@ function Form() {
 				}
 			}
 
-			const fromEmployer = compensationAmount(dailySalary, daysFromEmployer)
+			const fromEmployer = compensationAmount(
+				dailyCompensation,
+				daysFromEmployer
+			)
 
 			const fromHealthInsurance = compensationAmount(
-				dailySalary,
+				dailyCompensation,
 				daysFromHealthInsurance
 			)
 
@@ -130,7 +133,7 @@ function Form() {
 				compensatedDaysFromHealthInsurance: daysFromHealthInsurance,
 				compensatedAmountFromEmployer: fromEmployer,
 				compensatedAmountFromHealthInsurance: fromHealthInsurance,
-				dailyAllowance: dailySalary,
+				dailyAllowance: dailyCompensation,
 				totalSickDays: sanitizedSickDays,
 				totalCompensationAmount: totalCompensation,
 			})
